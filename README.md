@@ -1,9 +1,7 @@
-# amitpatel964.github.io
-
 <head>
   <title>Amit Patel - Programmer</title>
 </head>
 <body>
   <h1>About me</h1>
-  Hello, my name is Amit Patel
+  Hello, my name is Amit Patel. I am a Rutgers graduate who has studied chemical engineering and am currently studying Computer Science. In my free time, I enjoy going on my computer and learning more about what's going on in the world, learning coding and reviewing video games.
 </body>

@@ -1,5 +1,5 @@
 <head>
-  <title>Amit Patel - Programmer</title>
+  <title><strong>Amit Patel - Programmer</strong></title>
 </head>
 <body>
   <h1>About me</h1>

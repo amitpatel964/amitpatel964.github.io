@@ -1,11 +1,8 @@
 html {
-    background-image: linear-gradient(black, darkblue);
+    background-color: rgb(4, 4, 68);
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     height: 100%
-    margin: 0;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
 }
 
 .navbar {

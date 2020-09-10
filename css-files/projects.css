@@ -1,0 +1,101 @@
+html {
+    background-color: rgb(4, 4, 68);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+    font-size: xx-large;
+    display: block;
+    text-align: center;
+    float: right;
+    z-index: 2;
+    word-spacing: 15px;
+}
+
+.name {
+    font-size: xx-large;
+    display: inline-block;
+    z-index: 1;
+}
+
+.non-coding-projects {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-auto-rows: auto;   
+}
+
+.heading1 {
+    text-align: center;
+    list-style-position: inside;
+    grid-area: 1 / 2 / span 1 / span 1;
+    font-weight: bold;
+    font-size: large;
+    padding: 10px;
+}
+
+.details1 {
+    grid-area: 2 / 2 / span 1 / span 1;
+}
+
+.heading2 {
+    text-align: center;
+    list-style-position: inside;
+    grid-area: 3 / 2 / span 1 / span 1;
+    font-weight: bold;
+    font-size: large;
+    padding: 10px;
+}
+
+.details2 {
+    grid-area: 4 / 2 / span 1 / span 1;
+}
+
+.heading3 {
+    text-align: center;
+    list-style-position: inside;
+    grid-area: 5 / 2 / span 1 / span 1;
+    font-weight: bold;
+    font-size: large;
+    padding: 10px;
+}
+
+.details3 {
+    grid-area: 6 / 2 / span 1 / span 1;
+}
+
+ul {
+    text-align: left;
+    list-style-position: inside;
+}
+
+.bottom {
+    display: block;
+    border: clear;
+    border-radius: 25%;
+}
+
+h2 {
+    text-align: center;
+    font-size: 40px;
+}
+
+#resize {
+    display: inline-block;
+}
+
+a {
+    color: white;
+    font-weight: normal;
+    transition-property: color;
+    transition-duration: 1s;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(138, 138, 216);
+}
+
+footer {
+    text-align: center; 
+}

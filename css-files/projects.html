@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css-files/projects.css" type="text/css" rel="stylesheet">
+    <title>Amit Patel - Programmer</title>
+</head>
+<body>
+    <header>
+        <div class="name">
+            <a href="index.html">Amit Patel</a>
+        </div>
+        <div class="navbar">
+            <a href="../index.html">Home</a> <a href="../pages/projects.html">Projects</a> <a href="../pages/resume.html">Resume</a>
+        </div>
+    </header>
+
+    <main>
+        <h2>
+            Projects
+        </h2>
+        <div class="non-coding-projects">
+            <button type="button" class="collapse" id="button">Non-coding Related Projects</button>
+            <div class="content">
+                <div class="heading">
+                    Capstone Project – Biological Research Laboratory
+                </div>
+                <div>
+                    <ul>
+                        <li>Determined the effect on water quality if copper were present for an extended period of time.</li>
+                        <li>Prepared several different samples separated into two groups: the experimental group and the control group, which allowed a comparison to be made between the different conditions.</li>
+                        <li>Accurately measured several variables, such as the dissolved oxygen level and nitrates level.</li>
+                        <li>Prepared a comprehensive report detailing the results and presented it to fellow peers.</li>
+                    </ul>
+                </div>
+                <div class="heading">
+                    DNA Barcoding Project
+                </div>
+                <div>
+                    <ul>
+                        <li>Collected an animal sample and a plant sample from a lake for DNA barcoding.</li>
+                        <li>Prepared both samples for DNA replication and made homogeneous solutions.</li>
+                        <li>Accurately identified the species of each sample after the DNA was isolated and sequenced.</li>
+                    </ul>
+                </div>
+                <div class="heading">
+                    Senior Design Project – Chem & Biochem Design & Econ I & II
+                </div>
+                <div>
+                    <ul>
+                        <li>Designed and simulated a profitable chemical plant in Aspen Plus that efficiently turned biomass into a fuel.</li>
+                        <li>Combined several different simulations into one seamless simulation and optimized it in order to maximize the fuel output.</li>
+                        <li>Analyzed the results in order to determine the exact cost and profit of the plant.</li>
+                        <li>Wrote a comprehensive report detailing the specifics about the plant and then presented the findings to fellow peers in a concise and informative manner.
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <a href="https://www.linkedin.com/in/amit-patel-1a609a75/" id="resize"><img src="../images/LinkedIn Icon.png" alt="LinkedIn icon that links to LinkedIn profile" width="50" height="50" class="bottom"></a>
+    </footer>
+
+    <script>
+        var press = document.getElementsByClassName("collapse");
+        var i;
+        for (i = 0; i < press.length; i++) {
+            press[i].addEventListener("click", function() 
+            {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") 
+                {
+                    content.style.display = "none";
+                } 
+                else 
+                {
+                    content.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+</html>

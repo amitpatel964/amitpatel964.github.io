@@ -28,30 +28,17 @@ html {
 .heading1 {
     text-align: center;
     list-style-position: inside;
-    grid-area: 1 / 2 / span 1 / span 1;
-    font-weight: bold;
-    font-size: large;
-    padding: 10px;
-}
-
-.details1 {
-    grid-area: 2 / 2 / span 1 / span 1;
-}
-
-.heading2 {
-    text-align: center;
-    list-style-position: inside;
     grid-area: 3 / 2 / span 1 / span 1;
     font-weight: bold;
     font-size: large;
     padding: 10px;
 }
 
-.details2 {
+.details1 {
     grid-area: 4 / 2 / span 1 / span 1;
 }
 
-.heading3 {
+.heading2 {
     text-align: center;
     list-style-position: inside;
     grid-area: 5 / 2 / span 1 / span 1;
@@ -60,8 +47,21 @@ html {
     padding: 10px;
 }
 
-.details3 {
+.details2 {
     grid-area: 6 / 2 / span 1 / span 1;
+}
+
+.heading3 {
+    text-align: center;
+    list-style-position: inside;
+    grid-area: 7 / 2 / span 1 / span 1;
+    font-weight: bold;
+    font-size: large;
+    padding: 10px;
+}
+
+.details3 {
+    grid-area: 8 / 2 / span 1 / span 1;
 }
 
 ul {
@@ -73,6 +73,8 @@ ul {
     display: block;
     border: clear;
     border-radius: 25%;
+    position: relative;
+    top: 25px;
 }
 
 h2 {
@@ -98,4 +100,34 @@ a:hover {
 
 footer {
     text-align: center; 
+}
+
+.collapse {
+    background-color: rgba(201, 199, 207, 0.603);
+    color: white;
+    cursor: pointer;
+    padding: 25px;
+    margin: 20px;
+    grid-area: 1 / 2 / span 1 / span 1;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 22px;
+    display: block;
+    border: clear;
+    border-radius: 50%;
+    font-weight: bold;
+}
+  
+.active, .collapse:hover {
+    background-color: rgba(141, 161, 250, 0.774);
+}
+  
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    color: white;
+    background-color: rgb(4, 4, 68);
+    grid-area: 2 / 2 / span 1 / span 1;
 }

@@ -21,12 +21,12 @@
             Projects
         </h2>
         <div class="non-coding-projects">
-            <button type="button" class="collapse">Non-coding Related Projects</button>
+            <button type="button" class="collapse" id="button">Non-coding Related Projects</button>
             <div class="content">
-                <div class="heading1">
+                <div class="heading">
                     Capstone Project – Biological Research Laboratory
                 </div>
-                <div class="details1">
+                <div>
                     <ul>
                         <li>Determined the effect on water quality if copper were present for an extended period of time.</li>
                         <li>Prepared several different samples separated into two groups: the experimental group and the control group, which allowed a comparison to be made between the different conditions.</li>
@@ -34,29 +34,28 @@
                         <li>Prepared a comprehensive report detailing the results and presented it to fellow peers.</li>
                     </ul>
                 </div>
-                <div class="heading2">
+                <div class="heading">
                     DNA Barcoding Project
                 </div>
-                <div class="details2">
+                <div>
                     <ul>
                         <li>Collected an animal sample and a plant sample from a lake for DNA barcoding.</li>
                         <li>Prepared both samples for DNA replication and made homogeneous solutions.</li>
                         <li>Accurately identified the species of each sample after the DNA was isolated and sequenced.</li>
                     </ul>
                 </div>
-                <div class="heading3">
+                <div class="heading">
                     Senior Design Project – Chem & Biochem Design & Econ I & II
                 </div>
-                <div class="details3">
+                <div>
                     <ul>
                         <li>Designed and simulated a profitable chemical plant in Aspen Plus that efficiently turned biomass into a fuel.</li>
                         <li>Combined several different simulations into one seamless simulation and optimized it in order to maximize the fuel output.</li>
                         <li>Analyzed the results in order to determine the exact cost and profit of the plant.</li>
-                        <li>Wrote a comprehensive report detailing the specifics about the plant and then presented the findings to fellow peers in a concise and informative manner.</li>
+                        <li>Wrote a comprehensive report detailing the specifics about the plant and then presented the findings to fellow peers in a concise and informative manner.
                     </ul>
                 </div>
             </div>
-            
         </div>
     </main>
 
@@ -68,14 +67,18 @@
         var press = document.getElementsByClassName("collapse");
         var i;
         for (i = 0; i < press.length; i++) {
-            press[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var content = this.nextElementSibling;
-            if (content.style.display === "block") {
-                content.style.display = "none";
-            } else {
-                content.style.display = "block";
-            }
+            press[i].addEventListener("click", function() 
+            {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") 
+                {
+                    content.style.display = "none";
+                } 
+                else 
+                {
+                    content.style.display = "block";
+                }
             });
         }
     </script>

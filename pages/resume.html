@@ -23,36 +23,36 @@
         <div class="experience">
             <button type="button" class="collapse">Experience</button>
             <div class="content">
-                <div class="heading1">
+                <div class="heading">
                     Riverside Medical Group <span class="right">Secaucus, New Jersey</span>
                     <br>
                     Transcriptionist <span class="right">August 2020 - Present</span>
                 </div>
-                <div class="details1">
+                <div>
                     <ul>
                         <li>Analyzing patients' charts in order to find relvant information whether they have a certain condition or not.</li>
                         <li>Attaching relevant notes, verifying if the proper tests were done and submitting information to the patient's insurance company.</li>
                     </ul>
                 </div>
     
-                <div class="heading2">
+                <div class="heading">
                     Riverside Medical Group <span class="right">Secaucus, New Jersey</span>
                     <br>
                     Medical Scribe <span class="right">June 2019 - August 2020</span>
                 </div>
-                <div class="details2">
+                <div>
                     <ul>
                         <li>Documented the patient’s encounter with the provider, including the symptoms and concerns that they have and the provider's findings and plan for the patient.</li>
                         <li>Sent orders that were determined by the provider, including medications and blood tests.</li>
                     </ul>
                 </div>
     
-                <div class="heading3">
+                <div class="heading">
                     ShopRite <span class="right">Passaic, New Jersey</span>
                     <br>
                     Pharmacy Technician <span class="right">July 2018 - May 2019</span>
                 </div>
-                <div class="details3">
+                <div>
                     <ul>
                         <li>Accurately deciphered and typed prescriptions that the pharmacy received.</li>
                         <li>Contacted doctor’s offices to refill medications and solved issues with prescriptions, such as a change in dosage or directions compared to what the patient was previously receiving.</li>
@@ -61,12 +61,12 @@
                     </ul>
                 </div>
     
-                <div class="heading4">
+                <div class="heading">
                     Rutgers University <span class="right">New Brunswick, New Jersey</span>
                     <br>
                     Aresty Research Assistant <span class="right">September 2016 - April 2017</span>
                 </div>
-                <div class="details4">
+                <div>
                     <ul>
                         <li>Used vibrational spectroscopy to detect molecular structures and determined if the species formed can be used to create a catalyst.</li>
                         <li>Observed how different acids, which act as the catalyst, interact with a solvent mixture.</li>
@@ -75,24 +75,24 @@
                     </ul>
                 </div>
     
-                <div class="heading5">
+                <div class="heading">
                     ShopRite <span class="right">Passaic, New Jersey</span>
                     <br>
                     Cashier <span class="right">June 2016 - August 2016</span>
                 </div>
-                <div class="details5">
+                <div>
                     <ul>
                         <li>Interacted with customers to see if they had a satisfactory shopping experience.</li>
                         <li>Efficiently rang up items and processed payments to prevent the line from slowing down.</li>
                     </ul>
                 </div>
     
-                <div class="heading6">
+                <div class="heading">
                     American Institute of Chemical Engineers <span class="right">New Brunswick, New Jersey</span>
                     <br>
                     Member <span class="right">January 2016 - May 2017</span>
                 </div>
-                <div class="details6">
+                <div>
                     <ul>
                         <li>Attended weekly meetings to plan and discuss future events.</li>
                         <li>Assisted in brainstorming ideas that would be beneficial to the chemical engineering department.</li>
@@ -105,33 +105,33 @@
         <div class="education">
             <button type="button" class="collapse">Education</button>
             <div class="content">
-                <div class="heading1">
+                <div class="heading">
                     Rutgers University, School of Arts and Sciences <span class="right">New Brunswick, New Jersey</span>
                     <br>
                     Bachelor of Science in Computer Science <span class="right">Expected Graduation: May 2023</span>
                 </div>
-                <div class="details1">
+                <div>
     
                 </div>
     
-                <div class="heading2">
+                <div class="heading">
                     Rutgers University <span class="right">New Brunswick, New Jersey</span>
                     <br>
                     Part-time Student <span class="right">Fall 2017 - Fall 2018</span>
                 </div>
-                <div class="details2">
+                <div>
                     <ul>
                         <li>Cumulative GPA: 4.0/4.0</li>
                         <li>Took Biology I + II, Biological Research Lab, Intro to Biochemistry, Creative Writing and Scientific & Technical Writing</li>
                     </ul>
                 </div>
     
-                <div class="heading3">
+                <div class="heading">
                     Rutgers University, School of Engineering <span class="right">New Brunswick, New Jersey</span>
                     <br>
                     Bachelor of Science in Chemical Engineering <span class="right">Graduated: May 2017</span>
                 </div>
-                <div class="details3">
+                <div>
                     <ul>
                         <li>Cumulative GPA: 3.986/4.0</li>
                         <li>Dean’s List: All semesters, Academic Excellence Award, Top 2% of class, Summa Cum Laude</li>
@@ -144,8 +144,8 @@
         <div class="skills">
             <button type="button" class="collapse">Skills</button>
             <div class="content">
-                <div class="details1">
-                    Languages: C, Python, SQL, HTML, CSS, Javascript, Java
+                <div class="center">
+                    <span class="bold">Languages:</span> C, Python, SQL, HTML, CSS, Javascript, Java
                 </div>
             </div>
         </div>
@@ -159,14 +159,18 @@
         var press = document.getElementsByClassName("collapse");
         var i;
         for (i = 0; i < press.length; i++) {
-            press[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var content = this.nextElementSibling;
-            if (content.style.display === "block") {
-                content.style.display = "none";
-            } else {
-                content.style.display = "block";
-            }
+            press[i].addEventListener("click", function() 
+            {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") 
+                {
+                    content.style.display = "none";
+                } 
+                else 
+                {
+                    content.style.display = "block";
+                }
             });
         }
     </script>

@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Amit Patel">
-    <meta name="keywords" content="Github website,resume,HTML,CSS,C,Python,Java,SQL">
+    <meta name="keywords" content="Github website,resume,HTML,CSS,C,Python,Java">
     <link href="../css-files/resume.css" type="text/css" rel="stylesheet">
+    <script src="../javascript/index.js"></script>
     <title>Amit Patel - Programmer</title>
 </head>
 <body>
@@ -21,8 +22,8 @@
     <main>
         <h2>Resume</h2>
         <div class="experience">
-            <button type="button" class="collapse">Experience</button>
-            <div class="content">
+            <button type="button" class="collapse" onclick="showEntries('experienceContent')">Experience</button>
+            <div class="content" id="experienceContent" style="display:none">
                 <div class="heading">
                     Riverside Medical Group <span class="right">Secaucus, New Jersey</span>
                     <br>
@@ -103,26 +104,16 @@
         </div>
 
         <div class="education">
-            <button type="button" class="collapse">Education</button>
-            <div class="content">
+            <button type="button" class="collapse" onclick="showEntries('educationContent')">Education</button>
+            <div class="content" id="educationContent" style="display:none">
                 <div class="heading">
                     Rutgers University, School of Arts and Sciences <span class="right">New Brunswick, New Jersey</span>
                     <br>
                     Bachelor of Science in Computer Science <span class="right">Expected Graduation: May 2023</span>
                 </div>
                 <div>
-    
-                </div>
-    
-                <div class="heading">
-                    Rutgers University <span class="right">New Brunswick, New Jersey</span>
-                    <br>
-                    Part-time Student <span class="right">Fall 2017 - Fall 2018</span>
-                </div>
-                <div>
                     <ul>
-                        <li>Cumulative GPA: 4.0/4.0</li>
-                        <li>Took Biology I + II, Biological Research Lab, Intro to Biochemistry, Creative Writing and Scientific & Technical Writing</li>
+                        <li>Cumulative GPA: 3.991/4.0</li>
                     </ul>
                 </div>
     
@@ -142,10 +133,10 @@
         </div>
 
         <div class="skills">
-            <button type="button" class="collapse">Skills</button>
-            <div class="content">
+            <button type="button" class="collapse" onclick="showEntries('skillsContent')">Skills</button>
+            <div class="content" id="skillsContent" style="display:none">
                 <div class="center">
-                    <span class="bold">Languages:</span> C, Python, SQL, HTML, CSS, Javascript, Java
+                    <span class="bold">Languages:</span> C, Python, HTML, CSS, Javascript, Java
                 </div>
             </div>
         </div>
@@ -154,25 +145,5 @@
     <footer>
         <a href="https://www.linkedin.com/in/amit-patel-1a609a75/" id="resize"><img src="../images/LinkedIn Icon.png" alt="LinkedIn icon that links to LinkedIn profile" width="50" height="50" class="bottom"></a>
     </footer>
-
-    <script>
-        var press = document.getElementsByClassName("collapse");
-        var i;
-        for (i = 0; i < press.length; i++) {
-            press[i].addEventListener("click", function() 
-            {
-                this.classList.toggle("active");
-                var content = this.nextElementSibling;
-                if (content.style.display === "block") 
-                {
-                    content.style.display = "none";
-                } 
-                else 
-                {
-                    content.style.display = "block";
-                }
-            });
-        }
-    </script>
 </body>
 </html>

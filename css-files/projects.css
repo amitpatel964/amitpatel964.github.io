@@ -97,9 +97,12 @@ footer {
 
 .content {
     padding: 0 18px;
-    display: none;
     overflow: hidden;
     color: white;
     background-color: rgb(4, 4, 68);
     grid-area: 2 / 2 / span 1 / span 3;
+}
+
+.programmingContent {
+    display: none;
 }

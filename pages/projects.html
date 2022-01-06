@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../css-files/projects.css" type="text/css" rel="stylesheet">
-    <!-- <script src="/javascript/index.js"></script> -->
+    <script src="../javascript/index.js"></script>
     <title>Amit Patel - Programmer</title>
 </head>
 <body>
@@ -21,9 +21,9 @@
         <h2>
             Projects
         </h2>
-        <div class="non-coding-projects">
-            <button type="button" class="collapse" id="buttonProgramming">Programming Projects</button>
-            <div class="content">
+        <div class="non-coding-projects" id="codingProjects">
+            <button type="button" class="collapse" id="buttonProgramming" onclick="showEntries('programmingContent')">Programming Projects</button>
+            <div class="content" id="programmingContent" style="display:none">
                 <div class="heading">
                     Medicine Check
                 </div>
@@ -66,8 +66,8 @@
             </div>
         </div>
         <div class="non-coding-projects">
-            <button type="button" class="collapse" id="button">Other Projects</button>
-            <div class="content">
+            <button type="button" class="collapse" id="button" onclick="showEntries('nonProgrammingContent')">Other Projects</button>
+            <div class="content" id="nonProgrammingContent" style="display:none">
                 <div class="heading">
                     Capstone Project – Biological Research Laboratory
                 </div>
@@ -107,25 +107,5 @@
     <footer>
         <a href="https://www.linkedin.com/in/amit-patel-1a609a75/" id="resize"><img src="../images/LinkedIn Icon.png" alt="LinkedIn icon that links to LinkedIn profile" width="50" height="50" class="bottom"></a>
     </footer>
-
-    <script>
-        var press = document.getElementsByClassName("collapse");
-        var i;
-        for (i = 0; i < press.length; i++) {
-            press[i].addEventListener("click", function() 
-            {
-                this.classList.toggle("active");
-                var content = this.nextElementSibling;
-                if (content.style.display === "block") 
-                {
-                    content.style.display = "none";
-                } 
-                else 
-                {
-                    content.style.display = "block";
-                }
-            });
-        }
-    </script>
 </body>
 </html>

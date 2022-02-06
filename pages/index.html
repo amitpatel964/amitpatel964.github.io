@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jackbox Game Chooser</title>
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <p>
+            You will be able to select with Jackbox Party Pack games you own and which genres you are interested in playing.
+            You will also be able to enter the number of players playing.
+            You can also randomly choose a game from the table.
+        </p>
+    </header>
+    <main>
+        <p>
+            Games
+        </p>
+        <div>
+            <input type="checkbox" id="jackboxPack1" name="hasPack1" onclick="searchCheckbox(this)" checked>
+            <label for="jackboxPack1">Jackbox Party Pack 1</label>
+            <input type="checkbox" id="jackboxPack2" name="hasPack2" onclick="searchCheckbox(this)" checked>
+            <label for="jackboxPack2">Jackbox Party Pack 2</label>
+            <input type="checkbox" id="jackboxPack3" name="hasPack3" onclick="searchCheckbox(this)" checked>
+            <label for="jackboxPack3">Jackbox Party Pack 3</label>
+            <input type="checkbox" id="jackboxPack4" name="hasPack4" onclick="searchCheckbox(this)" checked>
+            <label for="jackboxPack4">Jackbox Party Pack 4</label>
+            <input type="checkbox" id="jackboxPack5" name="hasPack5" onclick="searchCheckbox(this)" checked>
+            <label for="jackboxPack5">Jackbox Party Pack 5</label>
+            <input type="checkbox" id="jackboxPack6" name="hasPack6" onclick="searchCheckbox(this)" checked>
+            <label for="jackboxPack6">Jackbox Party Pack 6</label>
+            <input type="checkbox" id="jackboxPack7" name="hasPack7" onclick="searchCheckbox(this)" checked>
+            <label for="jackboxPack7">Jackbox Party Pack 7</label>
+            <input type="checkbox" id="jackboxPack8" name="hasPack8" onclick="searchCheckbox(this)" checked>
+            <label for="jackboxPack8">Jackbox Party Pack 8</label>
+        </div>
+        <p>
+            Game Types
+        </p>
+        <div>
+            <input type="checkbox" id="gameTypeTrivia" name="triviaGamesFilter" onclick="searchCheckbox(this)">
+            <label for="gameTypeTrivia">Trivia</label>
+            <input type="checkbox" id="gameTypeDrawing" name="drawingGamesFilter" onclick="searchCheckbox(this)">
+            <label for="gameTypeDrawing">Drawing</label>
+            <input type="checkbox" id="gameTypeFillInTheBlank" name="fillInTheBlankGamesFilter" onclick="searchCheckbox(this)">
+            <label for="gameTypeFillInTheBlank">Fill in the Blank</label>
+            <input type="checkbox" id="gameTypeOther" name="otherGamesFilter" onclick="searchCheckbox(this)">
+            <label for="gameTypeOther">Other</label>
+        </div>
+        <p>
+            Additional Filters
+        </p>
+        <div>
+            <input type="checkbox" id="audienceAllowed" name="audienceAllowedGamesFilter" onclick="searchCheckbox(this)">
+            <label for="audienceAllowed">Audience Allowed</label>
+            <input type="checkbox" id="familyFriendly" name="familyFriendlyGamesFilter" onclick="searchCheckbox(this)">
+            <label for="familyFriendly">Family Friendly</label>
+        </div>
+        <div>
+            <input type="text" id="numberOfPlayers" name="numberOfPlayers" oninput="searchPlayerNumber(this)">
+            <label for="numberOfPlayers">Number of Players</label>
+        </div>
+        <p>
+            Game chooser
+        </p>
+        <div>
+            <button id="gameChooser" name="randomGameChooser" onclick="pickRandomGameFromList()">
+            <label for="gameChooser">Pick a game for me</label>
+        </div>
+        <table id="gamesTable">
+            <tr>
+                <th>Game Name</th>
+                <th>Pack</th>
+                <th>Number of Players</th>
+                <th>Game Type</th>
+                <th>Audience Allowed</th>
+                <th>Family Friendly</th>
+            </tr>
+            <tr>
+                <td>You Don't Know Jack 2015</td>
+                <td>1</td>
+                <td>1-4</td>
+                <td>Trivia</td>
+                <td>No</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td>Drawful</td>
+                <td>1</td>
+                <td>3-8</td>
+                <td>Drawing</td>
+                <td>No</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td>Word Spud</td>
+                <td>1</td>
+                <td>2-8</td>
+                <td>Other</td>
+                <td>No</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td>Lie Swatter</td>
+                <td>1</td>
+                <td>1-100</td>
+                <td>Trivia</td>
+                <td>No</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td>Fibbage XL</td>
+                <td>1</td>
+                <td>2-8</td>
+                <td>Fill in the Blank/Trivia</td>
+                <td>No</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td>Fibbage 2</td>
+                <td>2</td>
+                <td>2-8</td>
+                <td>Fill in the Blank/Trivia</td>
+                <td>No</td>
+                <td>Optional</td>
+            </tr>
+            <tr>
+                <td>Earwax</td>
+                <td>2</td>
+                <td>3-8</td>
+                <td>Other</td>
+                <td>Yes</td>
+                <td>Optional</td>
+            </tr>
+            <tr>
+                <td>Bidiots</td>
+                <td>2</td>
+                <td>3-6</td>
+                <td>Drawing</td>
+                <td>No</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>Quiplash XL</td>
+                <td>2</td>
+                <td>3-8</td>
+                <td>Fill in the Blank</td>
+                <td>Yes</td>
+                <td>Optional</td>
+            </tr>
+            <tr>
+                <td>Bomb Corp.</td>
+                <td>2</td>
+                <td>1-4</td>
+                <td>Other</td>
+                <td>No</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>Quiplash 2</td>
+                <td>3</td>
+                <td>3-8</td>
+                <td>Fill in the Blank</td>
+                <td>Yes</td>
+                <td>Optional</td>
+            </tr>
+            <tr>
+                <td>Trivia Murder Party</td>
+                <td>3</td>
+                <td>1-8</td>
+                <td>Trivia</td>
+                <td>Yes</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td>Guesspionage</td>
+                <td>3</td>
+                <td>2-8</td>
+                <td>Trivia</td>
+                <td>Yes</td>
+                <td>Optional</td>
+            </tr>
+            <tr>
+                <td>Fakin' It</td>
+                <td>3</td>
+                <td>3-6</td>
+                <td>Other</td>
+                <td>Yes</td>
+                <td>Optional</td>
+            </tr>
+            <tr>
+                <td>Tee K.O.</td>
+                <td>3</td>
+                <td>3-8</td>
+                <td>Drawing</td>
+                <td>Yes</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>Fibbage 3</td>
+                <td>4</td>
+                <td>2-8</td>
+                <td>Fill in the Blank/Trivia</td>
+                <td>Yes</td>
+                <td>Optional</td>
+            </tr>
+            <tr>
+                <td>Fibbage: Enough About You</td>
+                <td>4</td>
+                <td>3-8</td>
+                <td>Fill in the Blank/Trivia</td>
+                <td>Yes</td>
+                <td>Optional</td>
+            </tr>
+            <tr>
+                <td>Survive the Internet</td>
+                <td>4</td>
+                <td>3-8</td>
+                <td>Fill in the Blank</td>
+                <td>Yes</td>
+                <td>Optional</td>
+            </tr>
+            <tr>
+                <td>Monster Seeking Monster</td>
+                <td>4</td>
+                <td>3-7</td>
+                <td>Other</td>
+                <td>Yes</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td>Bracketeering</td>
+                <td>4</td>
+                <td>3-16</td>
+                <td>Fill in the Blank</td>
+                <td>Yes</td>
+                <td>Optional</td>
+            </tr>
+            <tr>
+                <td>Civic Doodle</td>
+                <td>4</td>
+                <td>3-8</td>
+                <td>Drawing</td>
+                <td>Yes</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>You Don't Know Jack: Full Stream</td>
+                <td>5</td>
+                <td>1-8</td>
+                <td>Trivia</td>
+                <td>Yes</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td>Split the Room</td>
+                <td>5</td>
+                <td>3-8</td>
+                <td>Fill in the Blank</td>
+                <td>Yes</td>
+                <td>Optional</td>
+            </tr>
+            <tr>
+                <td>Mad Verse City</td>
+                <td>5</td>
+                <td>3-8</td>
+                <td>Fill in the Blank</td>
+                <td>Yes</td>
+                <td>Optional</td>
+            </tr>
+            <tr>
+                <td>Zeeple Dome</td>
+                <td>5</td>
+                <td>3-6</td>
+                <td>Other</td>
+                <td>No</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>Patently Stupid</td>
+                <td>5</td>
+                <td>3-8</td>
+                <td>Drawing</td>
+                <td>Yes</td>
+                <td>Optional</td>
+            </tr>
+            <tr>
+                <td>Trivia Murder Party 2</td>
+                <td>6</td>
+                <td>1-8</td>
+                <td>Trivia</td>
+                <td>Yes</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td>Role Models</td>
+                <td>6</td>
+                <td>1-6</td>
+                <td>Other</td>
+                <td>Yes</td>
+                <td>Optional</td>
+            </tr>
+            <tr>
+                <td>Joke Boat</td>
+                <td>6</td>
+                <td>3-8</td>
+                <td>Fill in the Blank</td>
+                <td>Yes</td>
+                <td>Optional</td>
+            </tr>
+            <tr>
+                <td>Dictionarium</td>
+                <td>6</td>
+                <td>3-8</td>
+                <td>Fill in the Blank</td>
+                <td>Yes</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>Push the Button</td>
+                <td>6</td>
+                <td>4-10</td>
+                <td>Other</td>
+                <td>No</td>
+                <td>Optional</td>
+            </tr>
+            <tr>
+                <td>Quiplash 3</td>
+                <td>7</td>
+                <td>3-8</td>
+                <td>Fill in the Blank</td>
+                <td>Yes</td>
+                <td>Optional</td>
+            </tr>
+            <tr>
+                <td>The Devil and the Details</td>
+                <td>7</td>
+                <td>3-8</td>
+                <td>Other</td>
+                <td>Yes</td>
+                <td>Optional</td>
+            </tr>
+            <tr>
+                <td>Champ'd Up</td>
+                <td>7</td>
+                <td>3-8</td>
+                <td>Drawing</td>
+                <td>Yes</td>
+                <td>Optional</td>
+            </tr>
+            <tr>
+                <td>Talking Points</td>
+                <td>7</td>
+                <td>3-8</td>
+                <td>Other</td>
+                <td>Yes</td>
+                <td>Optional</td>
+            </tr>
+            <tr>
+                <td>Blather 'Round</td>
+                <td>7</td>
+                <td>2-6</td>
+                <td>Other</td>
+                <td>Yes</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>Job Job</td>
+                <td>8</td>
+                <td>3-10</td>
+                <td>Fill in the Blank</td>
+                <td>Yes</td>
+                <td>Optional</td>
+            </tr>
+            <tr>
+                <td>The Poll Mine</td>
+                <td>8</td>
+                <td>2-10</td>
+                <td>Other</td>
+                <td>Yes</td>
+                <td>Optional</td>
+            </tr>
+            <tr>
+                <td>Drawful Animate</td>
+                <td>8</td>
+                <td>3-10</td>
+                <td>Drawing</td>
+                <td>Yes</td>
+                <td>Optional</td>
+            </tr>
+            <tr>
+                <td>The Wheel of Enormous Proportions</td>
+                <td>8</td>
+                <td>2-8</td>
+                <td>Trivia</td>
+                <td>Yes</td>
+                <td>Optional</td>
+            </tr>
+            <tr>
+                <td>Weapons Drawn</td>
+                <td>8</td>
+                <td>4-8</td>
+                <td>Drawing</td>
+                <td>Yes</td>
+                <td>No</td>
+            </tr>
+        </table>
+    </main>
+</body>
